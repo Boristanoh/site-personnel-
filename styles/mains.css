@@ -74,6 +74,28 @@ p {
   background-size: cover;
   background-clip: border-box;
   background-repeat: no-repeat;
+  animation: scrollBackground 25s linear infinite;
+}
+@keyframes scrollBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-image: url("../../assets/img/acceuil/fond3.jpg");
+    background-position: 0% 0%;
+  }
+  50% {
+    background-image: url("../../assets/img/acceuil/fond4.jpg");
+    background-position: 0% 0%;
+  }
+  75% {
+    background-image: url("../../assets/img/acceuil/fond7.jpg");
+    background-position: 0% 0%;
+  }
+  100% {
+    background-image: url("../../assets/img/acceuil/fond.jpg"); /* Retour à la première image pour créer une boucle infinie */
+    background-position: 0% 0%;
+  }
 }
 
 .infoaccueil {
@@ -530,6 +552,7 @@ form button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 
 @media screen and (max-width: 996px) {
