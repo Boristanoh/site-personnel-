@@ -260,6 +260,7 @@ progress::-moz-progress-value {
 }
 
 .portfolio__img {
+  margin: auto;
   margin-top: 2rem;
   width: 65rem;
   height: 40rem;
@@ -272,6 +273,9 @@ progress::-moz-progress-value {
   }
   .portfolio__img {
     width: 90%;
+  }
+  .relax {
+    font-size: 1.5rem;
   }
 }
 .logo-ecole {
