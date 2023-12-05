@@ -279,6 +279,9 @@ progress::-moz-progress-value {
   .infoabout__competence, .progress-container, .progress-title {
     width: 80%;
   }
+  .infoabout__presentation__image {
+    margin: 0rem;
+  }
 }
 .relax {
   text-align: center;
