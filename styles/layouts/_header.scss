@@ -126,9 +126,12 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
+   
+   
 }
 
 @media screen and (max-width: 996px){
+   
     .navcolumn{
         display: none;
         padding: 0;
