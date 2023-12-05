@@ -1,0 +1,80 @@
+.accueil{
+    background-size: cover;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/acceuil/fond.jpg');
+    animation: scrollBackground 25s linear infinite;
+
+    @keyframes scrollBackground {
+    0% {
+        background-position: 0% 0%;
+        
+    }
+    25% {
+        background-image: url('/assets/img/acceuil/fond3.jpg');
+        background-position: 0% 0%;
+    }
+    50% {
+        background-image: url('/assets/img/acceuil/fond4.jpg');
+        background-position: 0% 0%;
+    }
+    75% {
+        background-image: url('/assets/img/acceuil/fond7.jpg');
+        background-position: 0% 0%;
+    }
+    100% {
+        background-image: url('/assets/img/acceuil/fond.jpg'); /* Retour à la première image pour créer une boucle infinie */
+        background-position: 0% 0%;
+    }
+  }
+}
+
+.infoaccueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2.5rem;
+    gap: 0.8rem;
+    
+    &__titre1,&__titre2,&__btn{
+        color: white;
+    }
+
+    &__titre1{
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 1.2;
+        font-family: $titre1-font;
+    }
+
+    &__titre2{
+        font-weight: normal;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-family: $police-font;
+      
+        line-height: 3rem;
+        text-decoration: underline $red-color;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 0.1rem;
+    }
+
+    &__btn{
+        display: inline-block;
+        background-color: $red-color;
+        border-radius: 1rem;
+        font-family: $other-font;
+        font-size:1.2rem ;
+        width: 8rem;
+        height: 2.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        &:hover{
+            background-color: #c81d11;
+        }
+
+    }
+}

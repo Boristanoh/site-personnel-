@@ -1,0 +1,72 @@
+.logo-ecole{
+    width: 10rem;
+    height: 10rem;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+
+.listecole{
+    display: flex;
+    flex-direction: column-reverse;
+    &__point{
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+            &--double{
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            &--texte{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                
+                
+                width: 45rem;
+                .items2{
+                    align-self: flex-end;
+                    font-style: italic;
+                }
+
+                .items1{
+                   justify-self: center;
+                   font-weight: bolder;
+                   line-height: 2rem;
+                   &__info{
+                    font-family: $other-font;
+                    font-size: 1.3rem;
+                   }
+                }
+            }
+    }
+}
+
+
+
+@media screen and (max-width: 996px){
+    .infoparcours,.infocontact{
+        margin-left: 2rem;
+    }
+
+    
+    .logo-ecole{
+        width: 7rem;
+        height: 7rem;
+        
+    }
+    .items1{
+        
+         font-size: 1rem;
+        }
+
+        .listecole__point--texte{
+            width: 90%;
+        }
+
+
+}

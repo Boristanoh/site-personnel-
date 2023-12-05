@@ -1,0 +1,41 @@
+//importation des fichiers de la section utils
+@import "utils/variables";
+
+//importation des fichiers de la base
+@import "base/typography";
+
+//importation des fichiers de la section pages
+@import "pages/index";
+@import "pages/about";
+@import "pages/portfolio";
+@import "pages/parcours";
+@import "pages/contact";
+
+//importation des fichiers de la section layouts
+@import "layouts/header";
+@import "layouts/footer";
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:$body-color;
+}
+main{
+    display: flex;
+    padding-right: 2rem;
+    
+}
+
+i{
+    width: 1.5rem;
+    height: 1.5rem;
+    color:white;
+    font-size: 1.5rem;
+}
+.active{
+    color:$red-color;
+    font-size: 1.7rem;
+}

@@ -1,0 +1,24 @@
+.relax{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.portfolio__img{
+    margin-top: 2rem;
+    width: 65rem;
+    height: 40rem;
+   text-align: center;
+}
+
+
+@media screen and (max-width: 996px){
+    .infoportfolio{
+        margin-left: 2rem;
+    }
+ 
+    .portfolio__img{
+        width: 90%;
+       
+    }
+
+}
