@@ -255,7 +255,7 @@ progress::-moz-progress-value {
     align-items: center;
   }
   .infoabout__competence, .progress-container, .progress-title {
-    width: 80%;
+    width: 60%;
   }
   .infoabout__presentation__image {
     margin: 0rem;
