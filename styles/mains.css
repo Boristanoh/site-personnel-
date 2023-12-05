@@ -69,35 +69,6 @@ p {
   align-items: flex-end;
 }
 
-.accueil {
-  background-image: url("../assets/img/acceuil/fond.jpg");
-  background-size: cover;
-  background-clip: border-box;
-  background-repeat: no-repeat;
-  animation: scrollBackground 25s linear infinite;
-}
-@keyframes scrollBackground {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-image: url("../assets/img/acceuil/fond3.jpg");
-    background-position: 0% 0%;
-  }
-  50% {
-    background-image: url("../assets/img/acceuil/fond4.jpg");
-    background-position: 0% 0%;
-  }
-  75% {
-    background-image: url("../assets/img/acceuil/fond7.jpg");
-    background-position: 0% 0%;
-  }
-  100% {
-    background-image: url("../assets/img/acceuil/fond.jpg"); /* Retour à la première image pour créer une boucle infinie */
-    background-position: 0% 0%;
-  }
-}
-
 .infoaccueil {
   display: flex;
   flex-direction: column;
@@ -608,4 +579,33 @@ i {
 .active {
   color: #B22222;
   font-size: 1.7rem;
+}
+
+.accueil {
+  background-image: url("../assets/img/acceuil/fond.jpg");
+  background-size: cover;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  animation: scrollBackground 25s linear infinite;
+}
+@keyframes scrollBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-image: url("../assets/img/acceuil/fond3.jpg");
+    background-position: 0% 0%;
+  }
+  50% {
+    background-image: url("../assets/img/acceuil/fond4.jpg");
+    background-position: 0% 0%;
+  }
+  75% {
+    background-image: url("../assets/img/acceuil/fond7.jpg");
+    background-position: 0% 0%;
+  }
+  100% {
+    background-image: url("../assets/img/acceuil/fond.jpg"); /* Retour à la première image pour créer une boucle infinie */
+    background-position: 0% 0%;
+  }
 }/*# sourceMappingURL=mains.css.map */
