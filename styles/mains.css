@@ -70,7 +70,7 @@ p {
 }
 
 .accueil {
-  background-image: url("/assets/img/acceuil/fond.JPG");
+  background-image: url("../../assets/img/acceuil/fond.jpg");
   background-size: cover;
   background-clip: border-box;
   background-repeat: no-repeat;
