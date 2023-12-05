@@ -277,7 +277,7 @@ progress::-moz-progress-value {
     align-items: center;
   }
   .infoabout__competence, .progress-container, .progress-title {
-    width: 100vh;
+    width: 30rem;
   }
 }
 .relax {
@@ -526,7 +526,7 @@ form button:hover {
 }
 
 .menu-toggle {
-  position: sticky;
+  position: fixed;
   top: 2%;
   left: 0px;
 }
