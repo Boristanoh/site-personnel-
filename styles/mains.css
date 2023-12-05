@@ -255,7 +255,7 @@ progress::-moz-progress-value {
     align-items: center;
   }
   .infoabout__competence, .progress-container, .progress-title {
-    width: 60%;
+    width: 20rem;
   }
   .infoabout__presentation__image {
     margin: 0rem;
@@ -504,6 +504,7 @@ form button:hover {
   font-size: 2.5rem;
   margin: 1rem 0rem 0rem 1rem;
   display: none;
+  z-index: 999;
 }
 
 .menu-toggle {
