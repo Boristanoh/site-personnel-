@@ -277,7 +277,7 @@ progress::-moz-progress-value {
     align-items: center;
   }
   .infoabout__competence, .progress-container, .progress-title {
-    width: 30rem;
+    width: 80%;
   }
 }
 .relax {
