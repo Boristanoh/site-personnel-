@@ -87,9 +87,6 @@
   
   .progress {
     appearance: none;
-   
-    
-    
     position: absolute;
     top: 0%;
     left: 0%;
@@ -136,6 +133,7 @@ progress::-webkit-progress-value {
   @media screen and (max-width: 996px){
     .infoabout{
       margin-left: 2rem;
+     
     }
     .infoabout__competence,.infoabout__passion,.infoabout__qualite,.infoabout__presentation{
       flex-direction: column;
@@ -146,18 +144,22 @@ progress::-webkit-progress-value {
     .infoabout__presentation{
       margin: 3rem 0rem 0rem 0rem;
     }
-    
-    .infoabout__competence{
-      justify-content: center;
-      align-items: center;
-    }
     .infoabout__competence,.progress-container,.progress-title{
       width:  20rem;
       
     }
+    
+    .infoabout__competence{
+      display: flex;
+      margin: auto;
+      width: 90%;
+      
+    }
+   
 
     .infoabout__presentation__image{
       margin: 0rem;
     }
+  
 
 }

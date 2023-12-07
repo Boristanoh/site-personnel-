@@ -4,18 +4,25 @@
 }
 
 .portfolio__img{
-    margin: auto;
+    
     margin-top: 2rem;
     width: 65rem;
     height: 40rem;
    text-align: center;
 }
-
+// .relax-bloc{
+//     margin: auto;
+// }
 
 @media screen and (max-width: 996px){
     .infoportfolio{
         margin-left: 2rem;
+        margin: auto;
+        
     }
+    // .relax-bloc{
+    //     margin: auto;
+    // }
  
     .portfolio__img{
         width: 90%;
