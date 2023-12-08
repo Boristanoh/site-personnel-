@@ -1,7 +1,9 @@
 .icone{
     color:black;
 }
-
+.infocontact{
+    width: 100%;
+}
 .infocontact__information{
     margin-top: 2rem;
     display: flex;
@@ -27,7 +29,6 @@ h3{
 
 form{
     padding: 1rem 1rem 1rem 1rem;
-    
     margin: auto;
     margin-bottom: 2rem;
     background-color: white;
@@ -61,11 +62,13 @@ form{
     display: flex;
     gap:2rem;
     justify-content: flex-start;
+    margin-bottom: 0rem;
 }
 #map{
     height: 30rem;
     width: 30rem;
     display: block;
+    margin-bottom: 2rem;
 }
 .cta{
     font-family: $titre2-font;
@@ -77,13 +80,16 @@ form{
 
 
 
-@media screen and (max-width: 996px){
+@media screen and (max-width: $breakpoint-first){
     .infocontact__information,.bloc__localisation{
         flex-direction:column ;
         align-items: center;
         &__bloc{
             width: 90%;
         }
+    }
+    .infocontact{
+        margin-left: 2rem;
     }
     form{
         width: 90%;
@@ -96,3 +102,18 @@ form{
 
 }
 
+@media screen and (max-width: $breakpoint-second){
+    form{
+        width: 80%;
+    }
+
+    #map{
+        width: 80%;
+    }
+  
+    .infocontact__information{
+        &__bloc{
+            width: 80%;
+        }
+  }
+}

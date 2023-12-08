@@ -130,7 +130,7 @@ progress::-webkit-progress-value {
 
   }
 
-  @media screen and (max-width: 996px){
+  @media screen and (max-width: $breakpoint-first){
     .infoabout{
       margin-left: 2rem;
      
@@ -161,5 +161,15 @@ progress::-webkit-progress-value {
       margin: 0rem;
     }
   
+
+}
+
+@media screen and (max-width: $breakpoint-second){
+  .infoabout p{
+    font-size: 1rem;
+  }
+  .progress-title,.progress-container {
+    width: 260px;
+  }
 
 }

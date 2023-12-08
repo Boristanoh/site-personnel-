@@ -3,30 +3,49 @@
     font-size: 2rem;
 }
 
+.relax-bloc{
+        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .portfolio__img{
     
     margin-top: 2rem;
-    width: 65rem;
-    height: 40rem;
+    width: 70%;
+    height: 60%;
    text-align: center;
 }
 // .relax-bloc{
 //     margin: auto;
 // }
 
-@media screen and (max-width: 996px){
+@media screen and (max-width: $breakpoint-first){
     .infoportfolio{
+       
         margin-left: 2rem;
-        margin: auto;
-        
+        padding-left: 2rem;
+
+
     }
     // .relax-bloc{
     //     margin: auto;
     // }
  
     .portfolio__img{
+        height: 90%;
         width: 90%;
        
+       
+    }
+    .relax-bloc{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .relax{
         

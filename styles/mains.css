@@ -9,6 +9,7 @@ h1 {
 }
 
 .title {
+  width: 100%;
   text-align: center;
 }
 
@@ -113,6 +114,18 @@ p {
   background-color: #c81d11;
 }
 
+@media screen and (max-width: 370px) {
+  .infoaccueil__titre1 {
+    font-size: 2rem;
+  }
+  .infoaccueil__titre2 {
+    font-size: 1.2rem;
+  }
+  .infoaccueil__btn {
+    font-size: 1rem;
+    width: 6rem;
+  }
+}
 .infoabout__presentation {
   margin: 0rem 0rem 0rem 4rem;
   display: flex;
@@ -231,7 +244,7 @@ progress::-moz-progress-value {
   visibility: hidden;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1030px) {
   .infoabout {
     margin-left: 2rem;
   }
@@ -255,25 +268,47 @@ progress::-moz-progress-value {
     margin: 0rem;
   }
 }
+@media screen and (max-width: 370px) {
+  .infoabout p {
+    font-size: 1rem;
+  }
+  .progress-title, .progress-container {
+    width: 260px;
+  }
+}
 .relax {
   text-align: center;
   font-size: 2rem;
 }
 
+.relax-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .portfolio__img {
   margin-top: 2rem;
-  width: 65rem;
-  height: 40rem;
+  width: 70%;
+  height: 60%;
   text-align: center;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1030px) {
   .infoportfolio {
     margin-left: 2rem;
-    margin: auto;
+    padding-left: 2rem;
   }
   .portfolio__img {
+    height: 90%;
     width: 90%;
+  }
+  .relax-bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .relax {
     font-size: 1.5rem;
@@ -287,16 +322,20 @@ progress::-moz-progress-value {
   opacity: 0.7;
 }
 
+.infoparcours {
+  width: 100%;
+}
+
 .listecole {
   display: flex;
   flex-direction: column-reverse;
 }
 .listecole__point {
+  width: 100%;
   margin-bottom: 2rem;
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  justify-content: center;
 }
 .listecole__point--double {
   display: flex;
@@ -307,7 +346,7 @@ progress::-moz-progress-value {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 45rem;
+  width: 80%;
 }
 .listecole__point--texte .items2 {
   align-self: flex-end;
@@ -323,8 +362,8 @@ progress::-moz-progress-value {
   font-size: 1.3rem;
 }
 
-@media screen and (max-width: 996px) {
-  .infoparcours, .infocontact {
+@media screen and (max-width: 1030px) {
+  .infoparcours {
     margin-left: 2rem;
   }
   .logo-ecole {
@@ -338,8 +377,33 @@ progress::-moz-progress-value {
     width: 90%;
   }
 }
+@media screen and (max-width: 370px) {
+  .infoparcours p {
+    font-size: 0.9rem;
+  }
+  .logo-ecole {
+    width: 6rem;
+    height: 6rem;
+  }
+  .items1 {
+    font-size: 0.7rem;
+  }
+  .listecole__point {
+    width: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding-right: 0.5rem;
+  }
+  .listecole__point--texte {
+    width: 90%;
+  }
+}
 .icone {
   color: black;
+}
+
+.infocontact {
+  width: 100%;
 }
 
 .infocontact__information {
@@ -399,12 +463,14 @@ form button:hover {
   display: flex;
   gap: 2rem;
   justify-content: flex-start;
+  margin-bottom: 0rem;
 }
 
 #map {
   height: 30rem;
   width: 30rem;
   display: block;
+  margin-bottom: 2rem;
 }
 
 .cta {
@@ -412,7 +478,7 @@ form button:hover {
   color: #B22222;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1030px) {
   .infocontact__information, .bloc__localisation {
     flex-direction: column;
     align-items: center;
@@ -420,11 +486,25 @@ form button:hover {
   .infocontact__information__bloc, .bloc__localisation__bloc {
     width: 90%;
   }
+  .infocontact {
+    margin-left: 2rem;
+  }
   form {
     width: 90%;
   }
   #map {
     width: 90%;
+  }
+}
+@media screen and (max-width: 370px) {
+  form {
+    width: 80%;
+  }
+  #map {
+    width: 80%;
+  }
+  .infocontact__information__bloc {
+    width: 80%;
   }
 }
 .navcolumn {
@@ -480,12 +560,13 @@ form button:hover {
   cursor: pointer;
   width: 4rem;
   height: 4rem;
-  border-radius: 25px;
+  border-radius: 35px;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0rem 0rem 0.5rem #000;
   display: none;
   z-index: 9;
 }
@@ -501,10 +582,11 @@ form button:hover {
   justify-self: flex-start;
   background-color: white;
   color: #B22222;
-  border-radius: 25px;
+  border-radius: 35px;
   width: 4rem;
   height: 4rem;
   font-size: 2.5rem;
+  box-shadow: 0rem 0rem 0.5rem white;
   margin: 1rem 0rem 0rem 1rem;
   display: none;
   z-index: 999;
@@ -536,7 +618,7 @@ form button:hover {
   z-index: 999;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1030px) {
   .navcolumn {
     display: none;
     padding: 0;
@@ -546,6 +628,18 @@ form button:hover {
   }
   .exit-toggle, .menu-toggle {
     display: flex;
+  }
+}
+@media screen and (max-width: 370px) {
+  .exit-toggle, .menu-toggle {
+    border-radius: 35px;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+  .menu-toggle span {
+    height: 1.5px;
+    width: 20px;
   }
 }
 .footer {
@@ -596,4 +690,5 @@ i {
   background-size: cover;
   background-clip: border-box;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }/*# sourceMappingURL=mains.css.map */
