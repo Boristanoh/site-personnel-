@@ -79,6 +79,7 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
    if (infoAbout){
       infoAbout.style.visibility = 'visible';
       infoAbout.style.overflow = 'auto';
+      infoAbout.style.touchAction = 'none';
       console.log('ok')
 }
 
@@ -86,6 +87,7 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
    if (infoPacours ){
       infoPacours .style.visibility = 'visible';
       infoPacours.style.overflow = 'auto';
+      
       console.log('ok')
    }
    
