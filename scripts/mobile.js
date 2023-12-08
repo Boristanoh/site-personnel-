@@ -3,6 +3,10 @@
  
 document.getElementById('mobile-menu').addEventListener('click', function() {
   
+   var bodyElement = document.body;
+
+      // Changer la couleur du fond
+      bodyElement.style.backgroundColor = "black";
 
    var element = document.querySelector('.navcolumn');
    element.classList.toggle('visible');
@@ -65,6 +69,10 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
 
    document.getElementById('mobile-menu-exit').addEventListener('click', function() {
    
+      var bodyElement = document.body;
+
+      // Changer la couleur du fond
+      bodyElement.style.backgroundColor = "#F5FFFA";
 
    var element = document.querySelector('.navcolumn');
    element.classList.toggle('visible');
