@@ -685,7 +685,7 @@ i {
   font-size: 1.7rem;
 }
 
-.accueil {
+.body-accueil {
   background-image: url("../assets/img/acceuil/fond.jpg");
   background-size: cover;
   background-clip: border-box;
