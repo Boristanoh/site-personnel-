@@ -747,8 +747,12 @@ i {
   font-size: 1.7rem;
 }
 
+.body-acc {
+  background-image: url("../assets/img/acceuil/fond.jpg");
+}
+
 .body-accueil {
-  
+  background-color: black;
   background-image: url("../assets/img/acceuil/fond.jpg");
   background-size: cover;
   background-clip: border-box;
