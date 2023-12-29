@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="styles/mains.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="scripts/mobile.js" defer></script>
+    <script>
+        function preloadImages() {
+            var images = ['../assets/img/acceuil/fond.jpg', '../assets/img/acceuil/fond10.jpg', '../assets/img/acceuil/fond3.jpg', '../assets/img/acceuil/fond7.jpg'];
+            images.forEach(function(image) {
+                var img = new Image();
+                img.src = image;
+            });
+        }
+        window.onload = preloadImages;
+    </script>
   
     <title>Accueil</title>
 
