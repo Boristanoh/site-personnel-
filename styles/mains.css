@@ -726,7 +726,7 @@ form button:hover {
   padding: 0px;
 }
 
-body {
+.Body {
   background-color: #F5FFFA;
 }
 
@@ -748,7 +748,7 @@ i {
 }
 
 .body-accueil {
-  background-color: black;
+  
   background-image: url("../assets/img/acceuil/fond.jpg");
   background-size: cover;
   background-clip: border-box;
