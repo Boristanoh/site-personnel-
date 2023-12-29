@@ -43,34 +43,32 @@ i{
 
 .body-accueil{
     background-color: black;
-    background-image: url('../assets/img/acceuil/fond.jpg');
+    
     background-size: cover;
     background-clip: border-box;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    will-change: background-image;
     
-//     animation: scrollBackground 25s linear infinite;
+    animation: scrollBackground 20s ease-out infinite;
 
-//     @keyframes scrollBackground {
-//     0% {
-//         background-position: 0% 0%;
+@keyframes scrollBackground {
+    0% {
+        background-image: url('../assets/img/acceuil/fond.jpg');
         
-//     }
-//     25% {
-//         background-image: url('../assets/img/acceuil/fond3.jpg');
-//         background-position: 0% 0%;
-//     }
-//     50% {
-//         background-image: url('../assets/img/acceuil/fond4.jpg');
-//         background-position: 0% 0%;
-//     }
-//     75% {
-//         background-image: url('../assets/img/acceuil/fond7.jpg');
-//         background-position: 0% 0%;
-//     }
-//     100% {
-//         background-image: url('../assets/img/acceuil/fond.jpg'); /* Retour à la première image pour créer une boucle infinie */
-//         background-position: 0% 0%;
-//     }
-//   }
+    }
+    40% {
+        background-image: url('../assets/img/acceuil/fond3.jpg');
+     
+    }
+    70% {
+        background-image: url('../assets/img/acceuil/fond4.jpg');
+        
+    }
+    100% {
+        background-image: url('../assets/img/acceuil/fond7.jpg');
+        
+    }
+    
+  }
 }

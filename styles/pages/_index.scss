@@ -1,5 +1,12 @@
 
-
+// .accueil {
+//     background-color: black;
+//     background-image: url("../assets/img/acceuil/fond.jpg");
+//     background-size: cover;
+//     background-clip: border-box;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//   }
 .infoaccueil{
     display: flex;
     flex-direction: column;
@@ -28,6 +35,11 @@
         text-decoration: underline $red-color;
         text-underline-offset: 0.5rem;
         text-decoration-thickness: 0.1rem;
+        transition: transform 450ms ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+        }
+    
     }
 
     &__btn{
@@ -44,12 +56,13 @@
         text-decoration: none;
         transition: transform 450ms ease-in-out, background-color 300ms 150ms ease-in-out;
         &:hover{
-            transform: scale(1.5);
+            transform: scale(1.25);
             background-color: #c81d11;
         }
        
 
     }
+    
 }
 
 @media screen and (max-width: $breakpoint-second){

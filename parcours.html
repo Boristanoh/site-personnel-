@@ -54,7 +54,7 @@
             </div>
 
             <ul class="listecole">
-                <li class="listecole__point">
+                <li class="listecole__point listecole__point4">
                     
                     <img src="assets/img/parcours/seminaire.jpg" alt="logo-ecole" class="logo-ecole" title="Voir le site">
                     <div class="listecole__point--texte">
@@ -66,7 +66,7 @@
                     </div>
                 </li>
 
-                <li class="listecole__point">
+                <li class="listecole__point listecole__point3">
                    
                     <a href="https://www.lyceeclassiqueabidjan.org/" target="_blank"><img src="assets/img/parcours/lca.jpeg" alt="" class="logo-ecole" title="Voir le site"></a>
                     <div class="listecole__point--texte">
@@ -77,7 +77,7 @@
                         <p class="items2"> de sept. 2018 à juil. 2021</p>
                     </div>
                 </li>
-                <li class="listecole__point">
+                <li class="listecole__point listecole__point2">
                     <a href="https://inphb.ci/ecoles/cpge" target="_blank"><img src="assets/img/parcours/inphb.jpeg" alt="" class="logo-ecole" title="Voir le site"></a>
                     <div class="listecole__point--texte">
                         <p class="items1">
@@ -89,7 +89,7 @@
                     </div>
                 </li>
 
-                <li class="listecole__point">
+                <li class="listecole__point listecole__point1">
                     <div class="listecole__point--double">
                         <a href="https://inphb.ci/" target="_blank"><img src="assets/img/parcours/inphb.jpeg" alt="" class="logo-ecole" title="Voir le site"></a>
                         <a href="http://esa.inphb.ci/" target="_blank"><img src="assets/img/parcours/esa.png" alt="" class="logo-ecole" title="Voir le site"></a>
@@ -104,7 +104,44 @@
                     </div>
                 </li>
             </ul>
-          
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  // Liste des classes à traiter
+                  var classesToCheck = [".listecole__point1", ".listecole__point2", ".listecole__point3", ".listecole__point4"];
+              
+                  // Écouter l'événement de scroll et appeler la fonction pour chaque classe
+                  document.addEventListener("scroll", function() {
+                    classesToCheck.forEach(function(className) {
+                      checkVisibility(className);
+                    });
+                  });
+              
+                  // Appeler la fonction pour vérifier la visibilité au chargement du DOM pour chaque classe
+                  classesToCheck.forEach(function(className) {
+                    checkVisibility(className);
+                  });
+                });
+              
+                // Fonction pour vérifier la visibilité pour une classe donnée
+                function checkVisibility(className) {
+                  var element = document.querySelector(className);
+                  var isVisible = false; // Booléen pour suivre si l'élément est déjà visible
+              
+                  // Vérifier si l'élément est potentiellement visible
+                  if (!isVisible) {
+                    var position = element.getBoundingClientRect().top;
+                    var screenHeight = window.innerHeight;
+                    if (position < screenHeight * 0.8) {
+                      element.classList.add("visible");
+                      isVisible = true; // Marquer l'élément comme visible
+                    }
+                  }
+                }
+              </script>
+              
+              
+
             
         
         </section>

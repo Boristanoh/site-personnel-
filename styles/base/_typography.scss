@@ -9,6 +9,7 @@ h1{
 .title{
   width: 100%;
   text-align: center;
+  animation: entrer-title 1s 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 h1 {
     position: relative;
@@ -72,3 +73,11 @@ p{
     
 }
 
+@keyframes entrer-title {
+  from{
+      transform: translateY(-9999px);
+  }
+  to{
+      transform: translateY(0px);
+  }
+}

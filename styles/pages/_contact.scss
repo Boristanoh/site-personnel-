@@ -42,6 +42,13 @@ form{
         font-size: 1.2rem;
         border: 0px;
         border-bottom: 0.15rem solid $black-color;
+      
+        &:focus{
+            outline: none;
+            border-width: 0.1rem 0.1rem 0.15rem 0.1rem; /* Haut, Droite, Bas, Gauche */
+            border-style: solid;
+            border-color: $red-color;
+        }
     }
 
     button{
@@ -52,7 +59,9 @@ form{
         border-color: $red-color;
         color:white;
         border-radius: 15px;
+        transition: transform 450ms ease-in-out, background-color 300ms 150ms ease-in-out;
         &:hover{
+            transform: scale(1.15);
             background-color: rgba(223, 16, 16, 0.767);
         }
     }

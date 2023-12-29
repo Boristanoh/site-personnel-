@@ -11,6 +11,7 @@ h1 {
 .title {
   width: 100%;
   text-align: center;
+  animation: entrer-title 1s 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
 h1 {
@@ -70,6 +71,14 @@ p {
   align-items: flex-end;
 }
 
+@keyframes entrer-title {
+  from {
+    transform: translateY(-9999px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 .infoaccueil {
   display: flex;
   flex-direction: column;
@@ -96,6 +105,10 @@ p {
           text-decoration: underline #B22222;
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 0.1rem;
+  transition: transform 450ms ease-in-out;
+}
+.infoaccueil__titre2:hover {
+  transform: scale(1.05);
 }
 .infoaccueil__btn {
   display: inline-block;
@@ -109,8 +122,10 @@ p {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: transform 450ms ease-in-out, background-color 300ms 150ms ease-in-out;
 }
 .infoaccueil__btn:hover {
+  transform: scale(1.25);
   background-color: #c81d11;
 }
 
@@ -337,6 +352,18 @@ progress::-moz-progress-value {
   gap: 1.5rem;
   align-items: center;
 }
+.listecole__point1 {
+  opacity: 0;
+}
+.listecole__point2 {
+  opacity: 0;
+}
+.listecole__point3 {
+  opacity: 0;
+}
+.listecole__point4 {
+  opacity: 0;
+}
 .listecole__point--double {
   display: flex;
   flex-direction: column;
@@ -362,6 +389,24 @@ progress::-moz-progress-value {
   font-size: 1.3rem;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .listecole__point1.visible {
+    animation: entrer-gauche 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+    animation-delay: 250ms;
+  }
+  .listecole__point2.visible {
+    animation: entrer-gauche 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+    animation-delay: 500ms;
+  }
+  .listecole__point3.visible {
+    animation: entrer-gauche 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+    animation-delay: 750ms;
+  }
+  .listecole__point4.visible {
+    animation: entrer-gauche 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+    animation-delay: 1000ms;
+  }
+}
 @media screen and (max-width: 1030px) {
   .infoparcours {
     margin-left: 2rem;
@@ -375,6 +420,15 @@ progress::-moz-progress-value {
   }
   .listecole__point--texte {
     width: 90%;
+  }
+}
+@keyframes entrer-gauche {
+  from {
+    transform: translateX(9999px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 @media screen and (max-width: 370px) {
@@ -447,6 +501,12 @@ form input, form textarea {
   border: 0px;
   border-bottom: 0.15rem solid #000;
 }
+form input:focus, form textarea:focus {
+  outline: none;
+  border-width: 0.1rem 0.1rem 0.15rem 0.1rem; /* Haut, Droite, Bas, Gauche */
+  border-style: solid;
+  border-color: #B22222;
+}
 form button {
   width: 10rem;
   height: 2rem;
@@ -454,8 +514,10 @@ form button {
   border-color: #B22222;
   color: white;
   border-radius: 15px;
+  transition: transform 450ms ease-in-out, background-color 300ms 150ms ease-in-out;
 }
 form button:hover {
+  transform: scale(1.15);
   background-color: rgba(223, 16, 16, 0.767);
 }
 
@@ -687,9 +749,24 @@ i {
 
 .body-accueil {
   background-color: black;
-  background-image: url("../assets/img/acceuil/fond.jpg");
   background-size: cover;
   background-clip: border-box;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  will-change: background-image;
+  animation: scrollBackground 20s ease-out infinite;
+}
+@keyframes scrollBackground {
+  0% {
+    background-image: url("../assets/img/acceuil/fond.jpg");
+  }
+  40% {
+    background-image: url("../assets/img/acceuil/fond3.jpg");
+  }
+  70% {
+    background-image: url("../assets/img/acceuil/fond4.jpg");
+  }
+  100% {
+    background-image: url("../assets/img/acceuil/fond7.jpg");
+  }
 }/*# sourceMappingURL=mains.css.map */

@@ -1,3 +1,6 @@
+$num-ecole:4;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-ecole;
 .logo-ecole{
     width: 10rem;
     height: 10rem;
@@ -12,12 +15,20 @@
 .listecole{
     display: flex;
     flex-direction: column-reverse;
+    
     &__point{
+         
             width: 100%;
             margin-bottom: 2rem;
             display: flex;
             gap: 1.5rem;
             align-items: center;
+            @for $i from 1 through $num-ecole{
+            &#{$i}{
+                opacity: 0;
+            }
+        }
+            
           
             &--double{
                 display: flex;
@@ -47,7 +58,24 @@
     }
 }
 
+@media (prefers-reduced-motion:no-preference){
+    .listecole__point{
+             
+                
+                
+                
+                @for $i from 1 through $num-ecole{
+                    &#{$i}.visible {
+                        animation: entrer-gauche $anim-dur cubic-bezier(0.075, 0.82, 0.165, 1) both;
+                        animation-delay: $anim-delay * $i;
+                        
+                     }
+                }
+        
+    }
+   
 
+}
 
 @media screen and (max-width: $breakpoint-first){
     .infoparcours{
@@ -71,6 +99,15 @@
         }
 
 
+}
+@keyframes entrer-gauche {
+    from{
+        transform: translateX(9999px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 @media screen and (max-width: $breakpoint-second){
@@ -99,3 +136,4 @@
         }
   
   }
+
