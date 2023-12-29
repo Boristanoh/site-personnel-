@@ -43,30 +43,34 @@ i{
 
 .body-accueil{
     background-color: black;
-    
+    background-image: url('../assets/img/acceuil/fond.jpg');
     background-size: cover;
     background-clip: border-box;
     background-repeat: no-repeat;
     background-attachment: fixed;
     will-change: background-image;
     
-    animation: scrollBackground 20s ease-out infinite;
+    animation: scrollBackground 20s ease-in-out both infinite ;
 
 @keyframes scrollBackground {
     0% {
         background-image: url('../assets/img/acceuil/fond.jpg');
         
     }
-    40% {
+    30% {
         background-image: url('../assets/img/acceuil/fond3.jpg');
      
     }
-    70% {
-        background-image: url('../assets/img/acceuil/fond4.jpg');
+    60% {
+        background-image: url('../assets/img/acceuil/fond10.jpeg');
+        
+    }
+    80% {
+        background-image: url('../assets/img/acceuil/fond7.jpg');
         
     }
     100% {
-        background-image: url('../assets/img/acceuil/fond7.jpg');
+        background-image: url('../assets/img/acceuil/fond.jpg');
         
     }
     
