@@ -9,7 +9,7 @@
     
     margin-right: 1.5rem ;
     padding: 0 4rem 0 4rem;
-    background-color: $black-color;
+    background-color: $red-color;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -30,6 +30,7 @@
                 display: inline-block;
                 display: flex;
                 gap:1rem;
+                overflow: hidden;
                 
                 color: white;
                 text-decoration: none;
@@ -52,10 +53,77 @@
         }
 
     }
+    
+    transform-origin: left top;
+    animation: animation-humberger 1000ms 150ms backwards;
+    .navcolumn__img{
+        animation: menu__item 3s 1500ms cubic-bezier(.1,.9,.1,1) both;
+    }
+    .exit-toggle{
+        animation: exit-toggle1 3s 3000ms  cubic-bezier(.1,.9,.1,1) both;
+    }
+    .footer {
+        animation: footer1 1s 2000ms cubic-bezier(.1,.9,.1,1) backwards;
+    }
+   
+    
+
+    @mixin menu__open-accent($dur, $delay) {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: black;
+        transform-origin: top left;
+        animation: menu $dur $delay both;
+        z-index: -1;
+    }
+    
+    &::after{
+            @include menu__open-accent(500ms, 150ms);
+            background: $black-color;
+            z-index: -2;
+    }
+   
 }
 
+$anim-delay1:500ms;
+.navbar__link1{
+    animation: menu__item 500ms 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+} 
+.navbar__link2{
+    animation: menu__item 500ms 1100ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+} 
+.navbar__link3{
+    animation: menu__item 500ms 1200ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+} 
+.navbar__link4{
+    animation: menu__item 500ms 1300ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+} 
+.navbar__link5{
+    animation: menu__item 500ms 1400ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+} 
 
-
+// @for $i from 1 through 5{
+//     .navbar__link#{$i} {
+//         background-color: brown;
+//         animation: menu__item 500ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+//         animation-delay: $anim-delay1 * $i;
+        
+        
+//      }
+// }
+@keyframes menu__item1 {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-500%);
+        opacity: 0;
+    }
+}
 //menu humberger
 
 
@@ -76,6 +144,7 @@
     box-shadow: 0rem 0rem 0.5rem $black-color;
     display: none;
     z-index: 9;
+    animation: exit-toggle1 3s 0ms  cubic-bezier(.1,.9,.1,1) both;
     
  
 }
@@ -85,6 +154,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
+    cursor: pointer;
     top: 2%;
     left: 0px;
     justify-self: flex-start;
@@ -99,7 +169,28 @@
     display: none;
     z-index: 999;
 }
-.menu-toggle {
+#mobile-menu-exit.visible{
+
+        background-color: aqua;
+        animation: animation-humberger 5000ms 0ms backwards reverse;
+        & ~ {
+        .navbar,.exit-toggle,.navcolumn__img,.footer,.navcolumn {
+           background-color: chartreuse;
+            animation: menu__item 1s 1500ms cubic-bezier(.1,.9,.1,1) both reverse;
+        }
+        .exit-toggle{
+            animation: exit-toggle1 1s 2000ms  cubic-bezier(.1,.9,.1,1) both reverse;
+        }
+        .footer {
+            animation: footer1 1s 2000ms cubic-bezier(.1,.9,.1,1) backwards reverse;
+            background-color: chartreuse;
+        }
+    
+    }
+}
+
+
+.menu-toggle{
     position: fixed;
     top: 2%;
     left: 0px;
@@ -117,8 +208,8 @@
 
 
 
-
 .navcolumn.visible{
+    background-color:$red-color;
     display: flex;
     position: fixed;
     top: 0;
@@ -129,8 +220,61 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
-   
-   
+}
+
+// .navv.ivisible{
+//     animation: animation-humberger 5000ms 0ms backwards reverse;
+// }
+
+
+
+
+
+
+@keyframes footer1 {
+        0% {
+            transform: translateY(10rem);
+            opacity: 0;
+        }
+        20% {
+            transform: translateY(30rem);
+            opacity: 1;
+        }
+}
+@keyframes exit-toggle1 {
+        0% {
+            transform: translateY(-200%);
+        }
+    }
+
+@keyframes menu__item {
+    0% {
+        transform: translateX(-500%);
+    }
+}
+
+@keyframes menu {
+    0% {
+        transform: scale(0,.07);
+    }
+    33% {
+        transform: scale(1,.07);
+        animation-timing-function: cubic-bezier(.73,.01,.2,.99)
+    }
+
+}
+
+@keyframes animation-humberger {
+    0%{
+       
+        transform: scaleX(0.1) scaleY(0);
+    }
+    50%{
+        transform: scaleX(1) scaleY(0.05);
+    }
+    100%{
+        transform: scaleY(1);
+    }
 }
 
 
@@ -160,6 +304,7 @@
         font-size: 2rem;
         
     }
+
 
     .menu-toggle span {
     

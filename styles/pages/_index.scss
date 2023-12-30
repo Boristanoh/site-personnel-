@@ -23,6 +23,8 @@
         font-size: 3rem;
         line-height: 1.2;
         font-family: $titre1-font;
+        animation: menu__item 2s 500ms cubic-bezier(.1,.9,.1,1) both;
+      
     }
 
     &__titre2{
@@ -39,6 +41,7 @@
         &:hover{
             transform: scale(1.05);
         }
+        animation: menu__item 2s 1000ms cubic-bezier(.1,.9,.1,1) both;
     
     }
 
@@ -59,11 +62,43 @@
             transform: scale(1.25);
             background-color: #c81d11;
         }
-       
+        
+        
+        animation: bouge 2s 2000ms cubic-bezier(.1,.9,.1,1) both ;
+        
 
     }
     
 }
+
+
+
+@keyframes bouge {
+    0% {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+   
+    30%{
+        transform: translateY(0);
+        opacity: 1;
+     
+    }
+    40%,60%,80%{
+        transform: rotate(5deg);
+        
+    }
+    50%,70%,90%{
+        transform: rotate(-5deg);
+        
+    }
+    
+    
+}
+
+
+  
+
 
 @media screen and (max-width: $breakpoint-second){
     .infoaccueil{

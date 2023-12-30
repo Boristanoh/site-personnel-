@@ -1,6 +1,8 @@
 $num-ecole:4;
 $anim-dur: 1000ms;
-$anim-delay: $anim-dur / $num-ecole;
+@use "sass:math";
+$anim-delay: math.div($anim-dur, $num-ecole);
+
 .logo-ecole{
     width: 10rem;
     height: 10rem;

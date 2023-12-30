@@ -3,13 +3,14 @@
  
 document.getElementById('mobile-menu').addEventListener('click', function() {
   
-   var bodyElement = document.body;
+   // var bodyElement = document.body;
 
-      // Changer la couleur du fond
-      bodyElement.style.backgroundColor = "black";
+   //    // Changer la couleur du fond
+   //    bodyElement.style.backgroundColor = "black";
 
    var element = document.querySelector('.navcolumn');
    element.classList.toggle('visible');
+   
 
    var monElement = document.getElementById('map');
    if (monElement){
@@ -73,9 +74,14 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
 
       // Changer la couleur du fond
       bodyElement.style.backgroundColor = "#F5FFFA";
+      var element = document.querySelector('.navcolumn');
+      element.classList.toggle('visible');
 
-   var element = document.querySelector('.navcolumn');
-   element.classList.toggle('visible');
+    
+
+   // var element = document.getElementById('mobile-menu-exit');
+   // element.classList.toggle('visible');
+
    var monElement = document.getElementById('map');
       if (monElement){
          monElement.style.display = 'block';
@@ -122,4 +128,10 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
       console.log('ok')
    }
 });
+// document.getElementById('mobile-menu-exit').addEventListener('mouseup', function() {
    
+//    var element = document.querySelector('.navv');
+//    element.classList.toggle('ivisible');
+//    var dummy = window.getComputedStyle(navColumn).height;
+//    console.log("bbb")
+//  });

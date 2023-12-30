@@ -8,7 +8,7 @@
     <script src="scripts/mobile.js" defer></script>
     <script>
         function preloadImages() {
-            var images = ['../assets/img/acceuil/fond.jpg', '../assets/img/acceuil/fond10.jpg', '../assets/img/acceuil/fond3.jpg', '../assets/img/acceuil/fond7.jpg'];
+            var images = ['../assets/img/acceuil/fond.jpg', '../assets/img/acceuil/fond10.jpeg', '../assets/img/acceuil/fond3.jpg', '../assets/img/acceuil/fond7.jpg'];
             images.forEach(function(image) {
                 var img = new Image();
                 img.src = image;
@@ -41,18 +41,18 @@
 <body class="body-acc body-accueil">
     <main class="accueil">
 
-        <section class="navcolumn">
+        <section class="navcolumn navv">
             <div class="exit-toggle" id="mobile-menu-exit">
                 x      
             </div>
             <img src="assets/img/acceuil/icone.png" alt="icone" class="navcolumn__img">
 
             <div class ="navbar">
-                <a href="index.html" class ="navbar__link"> <i class="fa-solid fa-house active"></i><span class="navbar__linktexte navbar__linktexte--actu">Acceuil</span></a>
-                <a href="about.html" class ="navbar__link"> <i class="fa-solid fa-user"></i> <span class ="navbar__linktexte">A Propos</span></a>
-                <a href="parcours.html" class ="navbar__link"> <i class="fa-solid fa-route"></i><span class ="navbar__linktexte">Parcours</span></a>
-                <a href="portfolio.html" class ="navbar__link"> <i class="fa-solid fa-list-check"></i><span class ="navbar__linktexte">Portfolio</span></a>
-                <a href="contact.html" class ="navbar__link"> <i class="fa-solid fa-envelope"></i><span class ="navbar__linktexte">Contact</span></a>
+                <a href="index.html" class ="navbar__link navbar__link1"> <i class="fa-solid fa-house active"></i><span class="navbar__linktexte navbar__linktexte--actu">Acceuil</span></a>
+                <a href="about.html" class ="navbar__link navbar__link2"> <i class="fa-solid fa-user"></i> <span class ="navbar__linktexte">A Propos</span></a>
+                <a href="parcours.html" class ="navbar__link navbar__link3"> <i class="fa-solid fa-route"></i><span class ="navbar__linktexte">Parcours</span></a>
+                <a href="portfolio.html" class ="navbar__link navbar__link4"> <i class="fa-solid fa-list-check"></i><span class ="navbar__linktexte">Portfolio</span></a>
+                <a href="contact.html" class ="navbar__link navbar__link5"> <i class="fa-solid fa-envelope"></i><span class ="navbar__linktexte">Contact</span></a>
             </div>
 
             <div class="footer">
@@ -68,6 +68,7 @@
                 
 
             </div>
+            
         </section>
         <div class="menu-toggle" id="mobile-menu">
             <span></span>
@@ -77,7 +78,7 @@
         <section class="infoaccueil">
             
             <p class="infoaccueil__titre1">TEHUA TANOH BORIS</p>
-            <p class="infoaccueil__titre2">Bienvenue sur mon portfolio</p>
+            <p class="infoaccueil__titre2 infoaccueil__titre2--name">Bienvenue sur mon portfolio</p>
             <a class="infoaccueil__btn"  href="https://www.linkedin.com/in/tanoh-boris-tehua-888038283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"  target="_blank" class="footer__linkicon">
                 Suivez moi 
             </a>
