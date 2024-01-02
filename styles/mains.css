@@ -445,20 +445,58 @@ progress::-moz-progress-value {
     width: 90%;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 765px) {
   .infoparcours {
     margin-left: 1rem;
+  }
+  .infoparcours p {
+    font-size: 0.9rem;
   }
   .logo-ecole {
     width: 5rem;
     height: 5rem;
   }
+  .listecole__point {
+    padding-bottom: 1rem;
+    align-items: flex-start;
+    border-bottom: 0.5px #B22222 solid;
+  }
   .listecole__point--texte {
-    width: 90%;
+    width: 100%;
     font-size: 0.1rem;
   }
+  .items1 {
+    font-size: 0.8rem;
+  }
   .items1__info {
+    display: inline-block;
     font-size: 0.3rem;
+    margin-top: 0.5rem;
+  }
+  .items1__inp {
+    display: inline-block;
+    border-bottom: 0.2px gray solid;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .infoparcours p {
+    font-size: 0.9rem;
+  }
+  .logo-ecole {
+    width: 4rem;
+    height: 4rem;
+  }
+  .items1 {
+    font-size: 0.8rem;
+  }
+  .listecole__point {
+    align-items: flex-start;
+    width: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding-right: 0.5rem;
   }
 }
 @keyframes entrer-gauche {
@@ -468,27 +506,6 @@ progress::-moz-progress-value {
   to {
     opacity: 1;
     transform: translateX(0px);
-  }
-}
-@media screen and (max-width: 370px) {
-  .infoparcours p {
-    font-size: 0.9rem;
-  }
-  .logo-ecole {
-    width: 6rem;
-    height: 6rem;
-  }
-  .items1 {
-    font-size: 0.7rem;
-  }
-  .listecole__point {
-    width: 18rem;
-    margin: auto;
-    margin-bottom: 2rem;
-    padding-right: 0.5rem;
-  }
-  .listecole__point--texte {
-    width: 90%;
   }
 }
 .icone {

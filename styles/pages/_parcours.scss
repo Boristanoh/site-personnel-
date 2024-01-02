@@ -108,36 +108,80 @@ $anim-delay: math.div($anim-dur, $num-ecole);
 
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 765px){
     .infoparcours{
         margin-left: 1rem;
+        & p{
+            font-size: 0.9rem;
+        }
+
     }
     .logo-ecole{
         width: 5rem;
         height: 5rem;
         
     }
-    .listecole__point--texte{
-        width: 90%;
-        font-size: 0.1rem;
-       
-    }
-
-    .items1{
-      
+    .listecole__point{
+        padding-bottom: 1rem;
         
-         
-        &__info{
+        
+        align-items: flex-start;
+        border-bottom: 0.5px $red-color solid;
+        &--texte{
+            width: 100%;
+            font-size: 0.1rem;
            
-            font-size: 0.3rem;
-            
         }
-        }
-   
-
+    }
     
 
+    .items1{
+        font-size: 0.8rem;
+        &__info{
+            display: inline-block;
+            font-size: 0.3rem;
+            margin-top: 0.5rem;
+        }
+
+        &__inp{
+           
+            display: inline-block;
+            border-bottom:  0.2px gray solid;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        }
 }
+
+@media screen and (max-width: $breakpoint-second){
+    .infoparcours p {
+       font-size: 0.9rem;
+    }
+    .logo-ecole{
+        width: 4rem;
+        height: 4rem;
+        
+    }
+    .items1{
+        
+         font-size: 0.8rem;
+        }
+        .listecole__point{
+            
+            align-items: flex-start;
+            width: 18rem;
+            margin: auto;
+            margin-bottom: 2rem;
+            padding-right: 0.5rem;
+        }
+
+        // .listecole__point--texte{
+        //     width: 90%;
+        // }
+  
+  }
+
+
 
 @keyframes entrer-gauche {
     from{
@@ -149,30 +193,5 @@ $anim-delay: math.div($anim-dur, $num-ecole);
     }
 }
 
-@media screen and (max-width: $breakpoint-second){
-    .infoparcours p {
-       font-size: 0.9rem;
-    }
-    .logo-ecole{
-        width: 6rem;
-        height: 6rem;
-        
-    }
-    .items1{
-        
-         font-size: 0.7rem;
-        }
-        .listecole__point{
-           
-            width: 18rem;
-            margin: auto;
-            margin-bottom: 2rem;
-            padding-right: 0.5rem;
-        }
 
-        .listecole__point--texte{
-            width: 90%;
-        }
-  
-  }
 
