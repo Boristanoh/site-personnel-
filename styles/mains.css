@@ -312,6 +312,19 @@ progress::-moz-progress-value {
     width: 260px;
   }
 }
+.agritech {
+  background-image: url("../assets/img/drone1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.agri {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .projet {
   width: 25rem;
   height: 35rem;
@@ -736,6 +749,10 @@ form button:hover {
 }
 
 .navbar__link5 {
+  animation: menu__item 500ms 1400ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}
+
+.navbar__link6 {
   animation: menu__item 500ms 1400ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
