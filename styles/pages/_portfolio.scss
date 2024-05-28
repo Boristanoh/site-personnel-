@@ -27,7 +27,7 @@
 @media screen and (max-width: $breakpoint-first){
     .infoportfolio{
        
-        margin-left: 2rem;
+        margin-left: 1rem;
         padding-left: 2rem;
 
 
@@ -55,6 +55,13 @@
         font-size: 1.5rem;
     }
 
+}
+
+
+@media screen and (max-width: $breakpoint-second){
+    .infoportfolio p{
+      font-size: 1rem;
+    }
 }
 .projet{
     width:  25rem;
