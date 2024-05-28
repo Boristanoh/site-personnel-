@@ -71,7 +71,7 @@ $anim-delay: math.div($anim-dur, $num-ecole);
                 @for $i from 1 through $num-ecole{
                     &#{$i}.visible {
                         animation: entrer-gauche $anim-dur cubic-bezier(0.075, 0.82, 0.165, 1) both;
-                        animation-delay: $anim-delay * $i;
+                        animation-delay: $anim-delay;
                         
                      }
                 }

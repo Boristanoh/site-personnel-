@@ -349,6 +349,43 @@ progress::-moz-progress-value {
     font-size: 1.5rem;
   }
 }
+.projet {
+  width: 25rem;
+  height: 35rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  animation: entrer-gauche 1s 500ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  background-color: rgba(204, 204, 204, 0.4);
+}
+.projet__image {
+  width: 95%;
+  margin: auto;
+}
+.projet__image img, .projet__image video {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.bloc__projet {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.plusss {
+  text-decoration: none;
+  color: #B22222;
+  font-size: 1.2rem;
+  margin-right: auto;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
 .logo-ecole {
   width: 10rem;
   height: 10rem;
@@ -416,15 +453,15 @@ progress::-moz-progress-value {
   }
   .listecole__point2.visible {
     animation: entrer-gauche 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
-    animation-delay: 500ms;
+    animation-delay: 250ms;
   }
   .listecole__point3.visible {
     animation: entrer-gauche 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
-    animation-delay: 750ms;
+    animation-delay: 250ms;
   }
   .listecole__point4.visible {
     animation: entrer-gauche 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
-    animation-delay: 1000ms;
+    animation-delay: 250ms;
   }
 }
 @media screen and (max-width: 1030px) {
@@ -651,8 +688,8 @@ form button:hover {
   animation: animation-humberger 1000ms 150ms backwards;
 }
 .navcolumn__img {
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
 }
 .navcolumn .navbar {
   display: flex;
@@ -950,4 +987,8 @@ i {
   100% {
     background-image: url("../assets/img/acceuil/fond.jpg");
   }
+}
+
+.navcolumn__img {
+  border-radius: 50%;
 }/*# sourceMappingURL=mains.css.map */

@@ -56,3 +56,43 @@
     }
 
 }
+.projet{
+    width:  25rem;
+    height: 35rem;
+    border-radius:  1.5rem;
+    padding: 1rem;
+    animation: entrer-gauche 1s 500ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+    // border: 0.5rem black solid;
+    background-color: rgb(204, 204, 204,0.4);
+    &__image{
+        width: 95%;
+        margin: auto;
+        
+        & img,video{
+            border-radius: 1rem;
+            width:100%;
+            
+        }
+    }
+
+}
+.bloc__projet{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.plusss{
+    text-decoration: none;
+    color: $red-color;
+    font-size: 1.2rem;
+    margin-right: auto;
+    display: inline-block;
+    background-color: rgb(255, 255, 255,0.5);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  
+ 
+}
