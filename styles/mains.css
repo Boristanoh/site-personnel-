@@ -690,6 +690,7 @@ form button:hover {
 .navcolumn__img {
   width: 10rem;
   height: 10rem;
+  border-radius: 50%;
 }
 .navcolumn .navbar {
   display: flex;
@@ -987,8 +988,4 @@ i {
   100% {
     background-image: url("../assets/img/acceuil/fond.jpg");
   }
-}
-
-.navcolumn__img {
-  border-radius: 50%;
 }/*# sourceMappingURL=mains.css.map */
