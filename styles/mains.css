@@ -312,6 +312,12 @@ progress::-moz-progress-value {
     width: 260px;
   }
 }
+.agri {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-left: 1rem;
+  height: 100%;
+}
+
 .projet {
   width: 25rem;
   height: 35rem;
@@ -971,4 +977,10 @@ i {
 
 .droit {
   color: #fff;
+}
+
+.agritech {
+  background-image: url("../assets/img/drone.jpg");
+  background-position: center;
+  background-size: cover;
 }/*# sourceMappingURL=mains.css.map */
