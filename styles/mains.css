@@ -983,4 +983,5 @@ i {
   background-image: url("../assets/img/drone.jpg");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }/*# sourceMappingURL=mains.css.map */
